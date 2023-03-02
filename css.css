@@ -1,0 +1,186 @@
+/*
+.menu a{
+    text-decoration: none;
+    font-family: Kiwi Maru;
+    font-size: 48px;
+    color: #5757a0;
+    display: inline-block;
+    margin: 0px;
+
+}
+.menu li{
+    display: inline;
+}
+header{
+
+
+.menu a:hover {
+    background-color: #726565;
+    color: black;
+}
+
+.menu {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+}
+.menu a.active {
+    background-color: rgb(255, 253, 253);
+    color: white;
+}
+
+
+---------------------------------------------------------------------------------------
+*/
+/*НИЖЕ ОПИСАНА МОЯ ПРОБЛЕМА, Я ПОНЯЛ В ЧЕМ СИТУАЦИЯ, при запуске через вебшторм ничего не прыгает, а если через файл, то какие-то проблемос*/
+/* Юрий Павлович, появилась какая-то несуразица. Страницы типа прыгают, возможно из-за отличающихся масштабов разных объектов.
+На однй странице есть текст 100px, а на другом всего к примеру 32px, и страница произвольно подгружается в произвольном масштабе, если Ctrl+
+то можно увидеть, что одна с 67% масштабом, вторая с 50% и там третья с сотым. Во время верстки такого не замечал, все было хорошо, поэтому
+у меня даже нет идей, что исправить. Появилось конкретно в конце, когда решил позапускать сайт на разных браузерах, и еще добавил несложную css
+анимацию приближения картинки 96-97 строки, вроде как убирал, но все равно странички прыгали. ПОМОГИТЕ пожалуйста!(Вот иногда кстати не прыгают,
+просто как-будто произвольное поведение*/
+ul.menu {
+    margin:0;
+    padding:0;
+}
+
+ body{
+     margin: 0;
+     padding: 0;
+ }
+
+/*
+body h1:first-child{
+    font-size: 96px;              Мудренка с "детьми"
+}
+*/
+
+.nottation{
+    font-size: 96px;
+}
+
+div p:first-child{
+font-size: 32px;
+}
+
+/*
+div.maintext p:last-child{       Хотел еще показать знания насчет псевдоклассов, но опять же, не могу понять в чем проблема,
+   font-size: 32px;              почему к последнему параграфу в Диве с классом мэйнтекст
+                                 не применяются параметры, поэтому ниже, сделал проще
+}
+*/
+
+.second-sentense{
+    font-size: 32px;
+}
+
+li a:hover{                     /*Сделал с li, так как гипперссылки в тексте начали подсвечиваться и принимать параметры ссылок, как запланировано только в навпанели*/
+    color: #626262;
+    text-decoration: none;
+}
+
+/*
+a:visited{
+    color: white;               Не могу понять, почему если я присваиваю закомментированные параметры ссылкам, то они применяются даже к непосещенным :(
+                                Сделал классами, но выглядит по "колхозному"
+}*/
+
+li .non-active{                 /*Сделал с li, так как гипперссылки в тексте начали подсвечиваться и принимать параметры ссылок, как запланировано только в навпанели*/
+    color: white;
+    text-decoration: none;
+}
+/*div .mavro:hover{
+ width: 1000px;
+    height: 600px;}*/
+
+.mavro { transition: all .2s ease-in-out; }     /*Лучшее что придумали люди*/
+.mavro:hover { transform: scale(1.1); }
+
+ .active{
+    color:gray;
+    text-decoration: none;
+}
+footer{
+    background: #D9D9D9;
+}
+
+ul.menu li{
+    font-size: 48px;
+}
+
+p a:hover{
+    background-color: rgba(0, 0, 255, 0.2); /* Не работает прозрачность???, а она и не должна работать, все, - понял, чем ближе к 0 -> прозрачнее*/
+
+
+}
+p a {
+    color: black;
+    text-decoration: underline;
+}
+
+img .logo{
+    width: 106px;
+    height: 105px;
+}
+
+footer{
+    font-size: 20px;
+}
+.tg{                                /*и без этого картинки должны быть нужных размеров, но береженого и бог бережет*/
+    width:40px;
+    height:45px;
+}
+.phone{
+    width:40px;
+    height:40px;
+}
+.mailpic{
+    width:46px;
+    height:46px;
+}
+
+.name{
+    font-size: 20px;
+}
+
+div.balance h2{
+    font-size: 48px;
+}
+
+div.balance {
+    font-size: 36px;               /* Хотел сгруппировать дивы с классом div.balance и div.ft-balance, чтобы задать фонт сайз 32, он там равный, но даже так, без группировки, свойства применились к двум дивам */
+}
+
+.textcap{
+    font-size:32px;
+}
+.cap{
+    font-size: 48px;
+}
+.depbut{
+    font-size: 36px;
+}
+ul{
+    list-style-type: none;
+}
+div.information p{
+    font-size: 24px;
+}
+div.main-information h2{
+    font-size: 48px;
+}
+div.usersinfo p{
+    font-size: 24px;
+}
+
+div.maininfo h1{
+    font-size: 48px;
+}
+div.maininfo p{
+    font-size: 36px;
+}
+.money{
+    font-size: 36px;
+}
+
